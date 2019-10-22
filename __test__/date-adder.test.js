@@ -15,5 +15,8 @@ describe('date adder', () => {
     expect(add(date, '1m').toUTCString()).toBe('Sun, 22 Dec 2019 21:52:51 GMT'); 
     expect(add(date, '1h').toUTCString()).toBe('Sun, 22 Dec 2019 22:51:51 GMT'); 
   });
+  it('flags an error if the incoming object is not a valid date', () => {
+    expect(() => add('date', '1h')).toThrow('Exception: input must be a date object'); 
+  });
 
 });
