@@ -1,11 +1,8 @@
-const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const moment = require('moment');
 
 function revenue(transactions) {
-
   return transactions.reduce((revenueObj, transaction) => {
-    const newDate = new Date(transaction.timestamp);
-    const dateString = `${days[newDate.getUTCDay()]} ${months[newDate.getUTCMonth()]} ${('0' + newDate.getUTCDate()).slice(-2)} ${newDate.getUTCFullYear()}`;
+    const dateString = moment.utc(transaction.timestamp).format('ddd MMM DD YYYY');
     if(revenueObj[dateString]) {
       revenueObj[dateString] += transaction.price;
     }
