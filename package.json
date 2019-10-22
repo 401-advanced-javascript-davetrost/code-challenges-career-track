@@ -1,0 +1,33 @@
+{
+  "name": "code-challenges-for-career-services-week",
+  "version": "1.0.0",
+  "description": "* Some code challenges",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^12.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3",
+    "nodemon": "^1.19.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint \"**/*.js\"",
+    "test": "jest --verbose --coverage",
+    "test:watch": "jest --watchAll --verbose",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/401-advanced-javascript-davetrost/data-structures-and-algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/401-advanced-javascript-davetrost/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/401-advanced-javascript-davetrost/data-structures-and-algorithms#readme"
+}
