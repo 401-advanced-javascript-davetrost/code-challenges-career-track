@@ -8,13 +8,14 @@ function add(date, diff) {
     d: 1000 * 60 * 60 * 24,
     w: 1000 * 60 * 60 * 24 * 7,
     M: 0,
-    Y: 1000 * 60 * 60 * 24 * 365,
+    Y: 0,
   };
 
   let newDate = new Date(date);
   const diffInMilliseconds = Object.keys(millisecondsLookup).reduce((ms, key) => {
     const count = diff.includes(key) ? +diff.split(key)[0].split(new RegExp(Object.keys(millisecondsLookup).join('|'), 'g')).pop() : 0;
     if(key === 'M') newDate.setMonth(newDate.getMonth() + count);
+    if(key === 'Y') newDate.setFullYear(newDate.getFullYear() + count);
     return ms + millisecondsLookup[key] * count;
   }, 0);
 
