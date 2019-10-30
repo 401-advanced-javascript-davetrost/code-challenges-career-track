@@ -5,3 +5,5 @@
 ## [Insertion Sort](./insertion-sort.md)
 
 ## [Merge Sort](./merge-sort.md)
+
+## [Quick Sort](./quick-sort.md)
