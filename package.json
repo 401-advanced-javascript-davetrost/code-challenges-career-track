@@ -4,6 +4,7 @@
   "description": "* Some code challenges",
   "main": "index.js",
   "dependencies": {
+    "moment": "^2.24.0",
     "node": "^12.10.0"
   },
   "devDependencies": {
